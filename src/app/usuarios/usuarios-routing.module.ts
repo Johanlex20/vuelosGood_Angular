@@ -4,7 +4,11 @@ import { UsuariosListaComponent } from './usuarios-lista/usuarios-lista.componen
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'usuarios-lista',
+    component: UsuariosListaComponent
+  },
+  {
+    path: 'usuarios-form',
     component: UsuariosListaComponent
   }
 ];
