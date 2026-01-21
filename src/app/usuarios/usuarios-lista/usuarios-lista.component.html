@@ -1,32 +1,52 @@
-<h1 class="text-center">LISTA DE USUARIOS</h1>
+<div class="container-custom">
 
-  <table class="shadow-2x1 border-2 border-violet-200 w-full">
-    <thead class="text-white">
-        <tr class="py-3 bg-violet-800">
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Rol</th>
-            <th>Fecha Creado</th>
-            <th>Fecha Actualizado</th>
-        </tr>
-    </thead>
-    <tbody class="text-purple-950 text-center">
-        <tr class="bg-purple-200 cursor-pointer duration-300" *ngFor="let usuario of usuarioPage?.content">
-          <td>
-            <div>{{ usuario.idUsuario }}</div>
-          </td>
-          <td>
-            <div>{{ usuario.idUsuarioData.usuName }}</div>
-          </td>
-          <td>
-            <div>{{ usuario.rol.rol }}</div>
-          </td>
-          <td>
-            <div>{{ usuario.usuCreatedAt }}</div>
-          </td>
-          <td>
-            <div>{{ usuario.usuUpdateAt }}</div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <h1 class="text-center">LISTA DE USUARIOS</h1>
+
+    <div class="con-btns-icon">
+          <button class="btn custom-btn-edi" [routerLink]="['/usuarios/usuario/form']"  matTooltip="Nuevo Usuario">
+              NUEVO USUARIO
+          </button>
+      </div>
+
+    <table class="shadow-2x1 border-2 border-violet-200 w-full">
+      <thead class="text-white">
+          <tr class="py-3 bg-violet-800">
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Rol</th>
+              <th>Fecha Creado</th>
+              <th>Fecha Actualizado</th>
+              <th>Botones</th>
+          </tr>
+      </thead>
+      <tbody class="text-purple-950 text-center">
+          <tr class="bg-purple-200 cursor-pointer duration-300" *ngFor="let usuario of usuarioPage?.content">
+            <td>
+              <div>{{ usuario.idUsuario }}</div>
+            </td>
+            <td>
+              <div>{{ usuario.idUsuarioData.usuName }}</div>
+            </td>
+            <td>
+              <div>{{ usuario.rol.rol }}</div>
+            </td>
+            <td>
+              <div>{{ usuario.usuCreatedAt }}</div>
+            </td>
+            <td>
+              <div>{{ usuario.usuUpdateAt }}</div>
+            </td>
+
+
+            <div class="con-btns-icon">
+              <button class="btn custom-btn-edi" [routerLink]="['/usuarios/usuario/form']"  matTooltip="Editar Usuario">
+                Editar
+              </button>
+              <button class="btn custom-btn-del" matTooltip="Eliminar Usuario">
+                Eliminar 
+              </button>  <!-- href="/admin/usuarios"  -->
+            </div>
+          </tr>
+      </tbody>
+    </table>
+</div>    

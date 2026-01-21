@@ -2,3 +2,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.container-custom {
+  @apply m-12;
+}
+
+/* BOTONES */
+
+
+/* Contenedor de botones con iconos */
+.con-btns-icon {
+  @apply flex flex-col items-center justify-center
+         w-full bg-cyan-400;
+}
+
+/* Botón dentro del contenedor */
+.con-btns-icon .btn {
+  @apply w-3/5 p-1 m-1;
+}
+
+/* Botón personalizado (antes .custom-btn) */
+.custom-btn-edi {
+  @apply bg-violet-700 text-white rounded-xl
+         hover:bg-violet-800
+         transition-colors duration-200;
+}
+
+.custom-btn-del {
+  @apply bg-red-700 text-white rounded-xl
+         hover:bg-red-800
+         transition-colors duration-200;
+}
+
